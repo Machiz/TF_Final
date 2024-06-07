@@ -57,6 +57,12 @@
     <ClCompile Include="ListaNotas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HashEntidad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hashtable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Nodo.h">
@@ -99,6 +105,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ListaNotas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HashEntidad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hashtable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
