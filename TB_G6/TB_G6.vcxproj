@@ -127,12 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Alumno.cpp" />
     <ClCompile Include="Cola.cpp" />
     <ClCompile Include="Ejecutivo.cpp" />
     <ClCompile Include="HashEntidad.cpp" />
     <ClCompile Include="Hashtable.cpp" />
-    <ClCompile Include="ListaEnlazada.cpp" />
     <ClCompile Include="ListaNotas.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Nodo.cpp" />
@@ -145,12 +143,10 @@
     <ClCompile Include="TB_G6.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alumno.h" />
     <ClInclude Include="Cola.h" />
     <ClInclude Include="Ejecutivo.h" />
     <ClInclude Include="HashEntidad.h" />
     <ClInclude Include="Hashtable.h" />
-    <ClInclude Include="ListaEnlazada.h" />
     <ClInclude Include="ListaNotas.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Nodo.h" />

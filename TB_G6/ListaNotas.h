@@ -166,6 +166,6 @@ T ListaNotas<T , NADA> ::buscar(T elem)
         }
         aux = aux->sig;
     }
-    return NADA;
+    return NADA;
 }
 

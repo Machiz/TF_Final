@@ -1,15 +1,107 @@
-﻿  Alumno.cpp
-  Cola.cpp
-  Ejecutivo.cpp
-  ListaEnlazada.cpp
-  Menu.cpp
-  Nodo.cpp
-  Notas.cpp
-  Padre.cpp
-  Pila.cpp
-  Profesor.cpp
-  Punto.cpp
-  Registro.cpp
+﻿  Menu.cpp
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(171,17): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(194,52): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(197,71): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(282,12): error C2990: 'Nodo': non-class template has already been declared as a class template
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(297,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(299): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(300,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(303,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(312,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(313,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(314,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(321,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(322,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(323,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(330,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(331,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(332,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): error C2672: 'std::max': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(51,26): message : could be '_Ty std::max(std::initializer_list<_Elem>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(48,26): message : or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(41,6): message : or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : 'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(31,33): message : or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : 'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(177,6): error C2084: function 'void horario(void)' already has a body
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(484,6): message : see previous definition of 'horario'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(193,5): error C2084: function 'int main(void)' already has a body
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(498,5): message : see previous definition of 'main'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(240,30): error C2039: 'OrdenMeritoPorNombre': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(261,34): error C2039: 'mostrar': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(277,34): error C2039: 'mostrar': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(304,17): error C2065: 'horario': undeclared identifier
   TB_G6.cpp
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(171,17): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(194,52): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(197,71): error C3872: '0xb1': this character is not allowed in an identifier
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(282,12): error C2990: 'Nodo': non-class template has already been declared as a class template
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(297,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(299): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(300,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(303,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(312,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(313,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(314,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(321,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(322,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(323,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(330,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(331,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(332,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,1): error C2027: use of undefined type 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Nodo.h(5,1): message : see declaration of 'Nodo'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): error C2672: 'std::max': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(51,26): message : could be '_Ty std::max(std::initializer_list<_Elem>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(48,26): message : or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(41,6): message : or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : 'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\utility(31,33): message : or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(339,20): message : 'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(177,6): error C2084: function 'void horario(void)' already has a body
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(484,6): message : see previous definition of 'horario'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(193,5): error C2084: function 'int main(void)' already has a body
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(498,5): message : see previous definition of 'main'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(240,30): error C2039: 'OrdenMeritoPorNombre': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(261,34): error C2039: 'mostrar': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(277,34): error C2039: 'mostrar': is not a member of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(500,5): message : see declaration of 'ListaEnlazada<Alumno>'
+C:\Users\marce\source\repos\TF_Final\TB_G6\Menu.h(304,17): error C2065: 'horario': undeclared identifier
   Generating Code...
-  TB_G6.vcxproj -> C:\Users\marce\Downloads\TF_V1\TB_G6vf\TB_G6\x64\Debug\TB_G6.exe

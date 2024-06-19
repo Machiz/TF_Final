@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Alumno.h"
+#include "Usuarios.h"
 #include "Ejecutivo.h"
 #include"Profesor.h"
-#include "Padre.h"
+
 
 using namespace std;
 
@@ -33,8 +33,8 @@ public:
        // ListaEnlazada<Alumno> alumnos;
         Ejecutivo ejecutivo("NombrePreestablecido");
         Profesor objProfesor;
-        Alumno objAlumno;
-       Padre objPadre;
+        //Alumno objAlumno;
+       //Padre objPadre;
 
         cin >> opcion;
         switch (opcion) //big 0(1)
@@ -106,66 +106,151 @@ public:
 
         case 3: //USUARIOS
         {
-            int opcion1;
-            cout << "¿Quién eres?" << endl;
-            cout << "1. Alumno      2. Padre      3. Regresar a página principal" << endl;
-            cin >> opcion1;
+            ListaEnlazada<Alumno> listaAlumnos;  // Instancia de ListaEnlazada
 
-            switch (opcion1)
-            {
-            case 1:
-            {
-                int opcion2;
-                cout << "¿Qué deseas ver?" << endl;
-                cout << "1. Orden de mérito actual      2. Regresar" << endl;
-                cin >> opcion2;
+            vector<string> nombres;
+            string nombre;
+            int cantidad;
 
-                switch (opcion2)
+            cout << "¿Cuántos alumnos desea ingresar?" << endl;
+            cin >> cantidad;
+
+            cout << "Ingrese los nombres de los alumnos:" << endl;
+            cin.ignore();
+            for (int i = 0; i < cantidad; ++i)
+            {
+                cout << "Nombre del alumno " << (i + 1) << ": ";
+                getline(cin, nombre);
+                nombres.push_back(nombre);
+            }
+
+            listaAlumnos.generarDatos(nombres);  // Generar datos con los nombres ingresados
+
+            int opcion = 0;
+
+            while (true) // Bucle principal para mantener el programa corriendo
+            {
+                cout << "¿Quién eres?" << endl;
+                cout << "1. Alumno      2. Padre      3. Salir" << endl;
+                cin >> opcion;
+
+                switch (opcion)
                 {
                 case 1:
                 {
-                    char volver;
-                    objAlumno.OrdenMerito();
-                    cout << "Desea volver al Menu Principal? (S / N)"<<endl;
-                    cin >> volver;
-                    if (volver == 's' || volver == 'S')
+                    int opcion1;
+                    cout << "¿Qué deseas ver?" << endl;
+                    cout << "1. Orden de mérito actual      2. Imprimir datos      3. Ver horario      4. Regresar" << endl;
+                    cin >> opcion1;
+
+                    switch (opcion1)
                     {
-                        system("cls");
-                        menu();
-                    }
-                    else {
+                    case 1:
+                    {
+                        string nombreAlumno;
+                        cout << "Ingrese el nombre del alumno: ";
+                        cin.ignore();
+                        getline(cin, nombreAlumno);
+                        listaAlumnos.OrdenMeritoPorNombre(nombreAlumno);
+
+                        char volver;
+                        cout << "¿Desea volver al menú principal? (S / N)" << endl;
+                        cin >> volver;
+                        if (volver == 's' || volver == 'S')
+                        {
+                            system("cls");
+                        }
                         break;
                     }
-                    break;                                
+                    case 2:
+                    {
+                        int subOpcion;
+                        cout << "1. Imprimir datos sin ordenar      2. Imprimir datos ordenados por edad" << endl;
+                        cin >> subOpcion;
+                        switch (subOpcion)
+                        {
+                        case 1:
+                        {
+                            cout << "Lista de alumnos:" << endl;
+                            listaAlumnos.mostrar();
+
+                            char volver;
+                            cout << "¿Desea volver al menú principal? (S / N)" << endl;
+                            cin >> volver;
+                            if (volver == 's' || volver == 'S')
+                            {
+                                system("cls");
+                            }
+                            break;
+
+                        }
+                        case 2:
+                        {
+                            listaAlumnos.ordenarPorEdad();
+                            cout << "\nLista de alumnos ordenada por edad:" << endl << endl;
+                            listaAlumnos.mostrar();
+
+                            char volver;
+                            cout << "¿Desea volver al menú principal? (S / N)" << endl;
+                            cin >> volver;
+                            if (volver == 's' || volver == 'S')
+                            {
+                                system("cls");
+                            }
+                            break;
+
+                        }
+                        default:
+                        {
+                            cout << "Opción no válida." << endl;
+                            break;
+                        }
+                        }
+                        break;
+                    }
+                    case 3:
+                    {
+                        // Mostrar horario
+                        string nombreAlumno;
+                        cout << "Ingrese el nombre del alumno para ver su horario: ";
+                        cin.ignore();
+                        getline(cin, nombreAlumno);
+                        horario();  // Llama a la función que muestra el horario    
+
+                        char volver;
+                        cout << "¿Desea volver al menú principal? (S / N)" << endl;
+                        cin >> volver;
+                        if (volver == 's' || volver == 'S')
+                        {
+                            system("cls");
+                        }
+                        break;
+                    }
+                    default:
+                    {
+                        cout << "Opción no válida." << endl;
+                        break;
+                    }
+                    }
+                    break;
                 }
-                break;
                 case 2:
                 {
-                    cout << "Regresando al menú principal..." << endl;
-                    system("cls");
-                    menu();
-                    break;                                 
-                }                                  
+                    // Implementar la opción para el padre si es necesario
+                    break;
+                }
+                case 3:
+                {
+                    cout << "Saliendo del programa..." << endl;
+                    //return 0;
+                }
                 default:
+                {
                     cout << "Opción no válida." << endl;
                     break;
                 }
-                break;
+                }
             }
-            case 2:          
-                objPadre.registrarAlumno();              
-                break;
-            case 3:
-                cout << "Regresando al menú principal" << endl;
-                system("cls");
-                menu();
-                break;
-            default:
-                cout << "Opción no válida." << endl;
-                break;
-            }
-            break;
-        }
         };
     };
 };
@@ -190,153 +275,3 @@ void horario()
     cout << endl;
 }
 
-int main()
-{
-    ListaEnlazada<Alumno> listaAlumnos;  // Instancia de ListaEnlazada
-
-    vector<string> nombres;
-    string nombre;
-    int cantidad;
-
-    cout << "¿Cuántos alumnos desea ingresar?" << endl;
-    cin >> cantidad;
-
-    cout << "Ingrese los nombres de los alumnos:" << endl;
-    cin.ignore();
-    for (int i = 0; i < cantidad; ++i)
-    {
-        cout << "Nombre del alumno " << (i + 1) << ": ";
-        getline(cin, nombre);
-        nombres.push_back(nombre);
-    }
-
-    listaAlumnos.generarDatos(nombres);  // Generar datos con los nombres ingresados
-
-    int opcion = 0;
-
-    while (true) // Bucle principal para mantener el programa corriendo
-    {
-        cout << "¿Quién eres?" << endl;
-        cout << "1. Alumno      2. Padre      3. Salir" << endl;
-        cin >> opcion;
-
-        switch (opcion)
-        {
-        case 1:
-        {
-            int opcion1;
-            cout << "¿Qué deseas ver?" << endl;
-            cout << "1. Orden de mérito actual      2. Imprimir datos      3. Ver horario      4. Regresar" << endl;
-            cin >> opcion1;
-
-            switch (opcion1)
-            {
-            case 1:
-            {
-                string nombreAlumno;
-                cout << "Ingrese el nombre del alumno: ";
-                cin.ignore();
-                getline(cin, nombreAlumno);
-                listaAlumnos.OrdenMeritoPorNombre(nombreAlumno);
-
-                char volver;
-                cout << "¿Desea volver al menú principal? (S / N)" << endl;
-                cin >> volver;
-                if (volver == 's' || volver == 'S')
-                {
-                    system("cls");
-                }
-                break;
-            }
-            case 2:
-            {
-                int subOpcion;
-                cout << "1. Imprimir datos sin ordenar      2. Imprimir datos ordenados por edad" << endl;
-                cin >> subOpcion;
-                switch (subOpcion)
-                {
-                case 1:
-                {
-                    cout << "Lista de alumnos:" << endl;
-                    listaAlumnos.mostrar();
-
-                    char volver;
-                    cout << "¿Desea volver al menú principal? (S / N)" << endl;
-                    cin >> volver;
-                    if (volver == 's' || volver == 'S')
-                    {
-                        system("cls");
-                    }
-                    break;
-
-                }
-                case 2:
-                {
-                    listaAlumnos.ordenarPorEdad();
-                    cout << "\nLista de alumnos ordenada por edad:" << endl << endl;
-                    listaAlumnos.mostrar();
-
-                    char volver;
-                    cout << "¿Desea volver al menú principal? (S / N)" << endl;
-                    cin >> volver;
-                    if (volver == 's' || volver == 'S')
-                    {
-                        system("cls");
-                    }
-                    break;
-
-                }
-                default:
-                {
-                    cout << "Opción no válida." << endl;
-                    break;
-                }
-                }
-                break;
-            }
-            case 3:
-            {
-                // Mostrar horario
-                string nombreAlumno;
-                cout << "Ingrese el nombre del alumno para ver su horario: ";
-                cin.ignore();
-                getline(cin, nombreAlumno);              
-                horario();  // Llama a la función que muestra el horario    
-
-                char volver;
-                cout << "¿Desea volver al menú principal? (S / N)" << endl;
-                cin >> volver;
-                if (volver == 's' || volver == 'S')
-                {
-                    system("cls");
-                }
-                break;
-            }
-            default:
-            {
-                cout << "Opción no válida." << endl;
-                break;
-            }
-            }
-            break;
-        }
-        case 2:
-        {
-            // Implementar la opción para el padre si es necesario
-            break;
-        }
-        case 3:
-        {
-            cout << "Saliendo del programa..." << endl;
-            return 0;
-        }
-        default:
-        {
-            cout << "Opción no válida." << endl;
-            break;
-        }
-        }
-    }
-
-    return 0;
-}
