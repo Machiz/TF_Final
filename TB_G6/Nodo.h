@@ -1,13 +1,13 @@
-#ifndef __NODO_H__
-#define __NODO_H__
+#ifndef __NODO1_H__
+#define __NODO1_H__
 #include<iostream>
 template<class T>
-class Nodo {
+class Nodo1 {
 public:
 	T dato;
-	Nodo<T>* siguiente;
+	Nodo1<T>* siguiente;
 
-	Nodo(T v, Nodo<T>* sig = NULL) {
+	Nodo1(T v, Nodo1<T>* sig = NULL) {
 		dato = v;
 		siguiente = sig;
 	}
