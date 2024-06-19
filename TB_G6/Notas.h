@@ -1,13 +1,15 @@
-#include "Nodo.h"
+#ifndef __COLA_H__
+#define __COLA_H__
 #include <iostream>
+#include "Nodo.h"
 using namespace std;
 template<class T>
 class Notas
 {
 private:	
 	
-	Nodo<T>* inicio;
-	Nodo<T>* fin;
+	Nodo1<T>* inicio;
+	Nodo1<T>* fin;
 public:
 	Notas()
 	{
@@ -19,9 +21,13 @@ public:
 	bool esVacia();
 	//double calcularPromedio();
 };
+template<class T>
+bool Notas<T>::esVacia() {
+	return (inicio == NULL);
+}
 template <class T>
 void Notas<T>::agregarNota(T n) {
-	Nodo<T>* nodo = new Nodo<T>(n);
+	Nodo1<T>* nodo = new Nodo1<T>(n);
 	if (esVacia()) {
 		inicio = nodo;
 		fin = inicio;
@@ -39,19 +45,14 @@ T Notas<T>::quitarNota()
 {
 	T dato = inicio->dato;
 
-	if (inicio == fin) 
-	{
+	if (inicio == fin) {
 		inicio = NULL;
 		fin = NULL;
 	}
-	else 
-	{
+	else {
 		inicio = inicio->siguiente;
 	}
 
 	return dato;
 }
-template<class T>
-bool Notas<T>::esVacia() {
-	return (inicio == NULL);
-}
+#endif
