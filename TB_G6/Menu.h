@@ -9,11 +9,25 @@ using namespace std;
 class Menu
 {
 private:
-    int O; 
+    int O;
 public:
     Menu() {};
     ~Menu() {};
-
+    void horario()
+    {
+        cout << "Lunes - Viernes" << endl;
+        cout << "08:00 - 08:45 : Desarrollo personal, ciudadanía y cívica" << endl;
+        cout << "08:45 - 09:30 : Ciencias sociales" << endl;
+        cout << "09:30 - 10:15 : Fisica" << endl;
+        cout << "10:15 - 10:45 : Recreo" << endl;
+        cout << "10:45 - 11:30 : Historia" << endl;
+        cout << "11:30 - 12:15 : Historia del arte" << endl;
+        cout << "12:15 - 13:00 : Historia" << endl;
+        cout << "13:00 - 13:45 : Quimica" << endl;
+        cout << "13:45 - 14:30 : Matematica" << endl;
+        cout << "14:30 - 15:15 : Educacion fisica" << endl;
+        cout << endl;
+    }
     void menu()
     {
         cout << "                               ######   ######   #        ######   ######     ##     #######" << endl;
@@ -27,10 +41,10 @@ public:
         cout << "\nEliga la opcion que desee realizar: " << endl;
 
 
-        
+
 
         int opcion = 0;
-       // ListaEnlazada<Alumno> alumnos;
+        // ListaEnlazada<Alumno> alumnos;
         Ejecutivo ejecutivo("NombrePreestablecido");
         Profesor objProfesor;
         //Alumno objAlumno;
@@ -50,7 +64,7 @@ public:
                 int numDocentes;
                 cout << "Ingrese el número de docentes a agregar: ";
                 cin >> numDocentes;
-                cin.ignore(); 
+                cin.ignore();
 
                 for (int i = 0; i < numDocentes; ++i) {
                     string nombreDocente;
@@ -78,7 +92,7 @@ public:
                 }
                 break;
             }
-            case 3: 
+            case 3:
             {
                 ejecutivo.mostrarPlana();
                 break;
@@ -151,7 +165,7 @@ public:
                         cout << "Ingrese el nombre del alumno: ";
                         cin.ignore();
                         getline(cin, nombreAlumno);
-                        listaAlumnos.OrdenMeritoPorNombre(nombreAlumno);
+                        listaAlumnos.OrdenMerito(nombreAlumno);
 
                         char volver;
                         cout << "¿Desea volver al menú principal? (S / N)" << endl;
@@ -172,7 +186,7 @@ public:
                         case 1:
                         {
                             cout << "Lista de alumnos:" << endl;
-                            listaAlumnos.mostrar();
+                            listaAlumnos.mostrarDatos();
 
                             char volver;
                             cout << "¿Desea volver al menú principal? (S / N)" << endl;
@@ -188,7 +202,7 @@ public:
                         {
                             listaAlumnos.ordenarPorEdad();
                             cout << "\nLista de alumnos ordenada por edad:" << endl << endl;
-                            listaAlumnos.mostrar();
+                            listaAlumnos.mostrarDatos();
 
                             char volver;
                             cout << "¿Desea volver al menú principal? (S / N)" << endl;
@@ -249,29 +263,17 @@ public:
                     cout << "Opción no válida." << endl;
                     break;
                 }
-                }
+                };
             }
-        };
+        }
+        }
+
     };
 };
 
 
 //para probar la funcionalidad de usuarios
-#include "Usuarios.h"
+//#include "Usuarios.h"
 
-void horario()
-{
-    cout << "Lunes - Viernes" << endl;
-    cout << "08:00 - 08:45 : Desarrollo personal, ciudadanía y cívica" << endl;
-    cout << "08:45 - 09:30 : Ciencias sociales" << endl;
-    cout << "09:30 - 10:15 : Fisica" << endl;
-    cout << "10:15 - 10:45 : Recreo" << endl;
-    cout << "10:45 - 11:30 : Historia" << endl;
-    cout << "11:30 - 12:15 : Historia del arte" << endl;
-    cout << "12:15 - 13:00 : Historia" << endl;
-    cout << "13:00 - 13:45 : Quimica" << endl;
-    cout << "13:45 - 14:30 : Matematica" << endl;
-    cout << "14:30 - 15:15 : Educacion fisica" << endl;
-    cout << endl;
-}
+
 

@@ -168,7 +168,7 @@ public:
         for (const string& nombre : nombres) {
             string sexo = (rand() % 2 == 0) ? "M" : "F";
             int edad = rand() % 11 + 7;
-            int añoEscolar = rand() % 12 + 1;
+            int anoEscolar = rand() % 12 + 1;
             string seccion = (rand() % 2 == 0) ? "A" : "B";
 
             // Pidiendo notas al usuario
@@ -191,10 +191,10 @@ public:
             cout << "  Educación física: ";
             cin >> notaEducacionFisica;
 
-            Alumno nuevoAlumno(nombre, edad, sexo, añoEscolar, seccion, notaDesarrolloPersonal, notaCienciasSociales, notaFisica, notaHistoria, notaHistoriaDelArte, notaQuimica, notaMatematica, notaEducacionFisica);
+            Alumno nuevoAlumno(nombre, edad, sexo, anoEscolar, seccion, notaDesarrolloPersonal, notaCienciasSociales, notaFisica, notaHistoria, notaHistoriaDelArte, notaQuimica, notaMatematica, notaEducacionFisica);
             insertarAlumno(nuevoAlumno);
 
-            archivo << nombre << "," << edad << "," << sexo << "," << añoEscolar << "," << seccion << ","
+            archivo << nombre << "," << edad << "," << sexo << "," << anoEscolar << "," << seccion << ","
                 << notaDesarrolloPersonal << "," << notaCienciasSociales << "," << notaFisica << ","
                 << notaHistoria << "," << notaHistoriaDelArte << "," << notaQuimica << "," << notaMatematica << ","
                 << notaEducacionFisica << endl;
@@ -250,14 +250,12 @@ public:
         Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
         if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
             cout << "Notas de " << nombreAlumno << ":\n";
-            cout << "Desarrollo personal: " << alumnoEncontrado.notaDesarrolloPersonal << endl;
-            cout << "Ciencias sociales: " << alumnoEncontrado.notaCienciasSociales << endl;
-            cout << "Física: " << alumnoEncontrado.notaFisica << endl;
-            cout << "Historia: " << alumnoEncontrado.notaHistoria << endl;
-            cout << "Historia del arte: " << alumnoEncontrado.notaHistoriaDelArte << endl;
-            cout << "Química: " << alumnoEncontrado.notaQuimica << endl;
             cout << "Matemática: " << alumnoEncontrado.notaMatematica << endl;
-            cout << "Educación física: " << alumnoEncontrado.notaEducacionFisica << endl;
+            cout << "Ingles: " << alumnoEncontrado.notaDesarrolloPersonal << endl;
+            cout << "Comunicacion: " << alumnoEncontrado.notaFisica << endl;
+            cout << "Ciencias: " << alumnoEncontrado.notaCienciasSociales << endl;
+            cout << "Historia: " << alumnoEncontrado.notaHistoria << endl;
+
         }
         else {
             cout << "Alumno no encontrado." << endl;
@@ -279,6 +277,7 @@ public:
 };
 
 // Clase Nodo para el árbol binario
+template<class T>
 class Nodo {
 public:
     Alumno dato;
@@ -288,80 +287,81 @@ public:
 };
 
 // Clase Árbol Binario
-class ArbolBinario {
-private:
-    Nodo* raiz;
-
-    Nodo* insertarNodo(Nodo* nodo, const Alumno& dato) {
-        if (nodo == nullptr) {
-            return new Nodo(dato);
-        }
-        if (dato.getEdad() < nodo->dato.getEdad()) {
-            nodo->izquierdo = insertarNodo(nodo->izquierdo, dato);
-        }
-        else {
-            nodo->derecho = insertarNodo(nodo->derecho, dato);
-        }
-        return nodo;
-    }
-
-    void enOrden(Nodo* nodo) const {
-        if (nodo == nullptr) {
-            return;
-        }
-        enOrden(nodo->izquierdo);
-        nodo->dato.mostrarDatos();
-        enOrden(nodo->derecho);
-    }
-
-    void preOrden(Nodo* nodo) const {
-        if (nodo == nullptr) {
-            return;
-        }
-        nodo->dato.mostrarDatos();
-        preOrden(nodo->izquierdo);
-        preOrden(nodo->derecho);
-    }
-
-    void postOrden(Nodo* nodo) const {
-        if (nodo == nullptr) {
-            return;
-        }
-        postOrden(nodo->izquierdo);
-        postOrden(nodo->derecho);
-        nodo->dato.mostrarDatos();
-    }
-
-    int altura(Nodo* nodo) const {
-        if (nodo == nullptr) {
-            return 0;
-        }
-        return 1 + max(altura(nodo->izquierdo), altura(nodo->derecho));
-    }
-
-public:
-    ArbolBinario() : raiz(nullptr) {}
-
-    void insertar(const Alumno& dato) {
-        raiz = insertarNodo(raiz, dato);
-    }
-
-    void enOrden() const {
-        enOrden(raiz);
-    }
-
-    void preOrden() const {
-        preOrden(raiz);
-    }
-
-    void postOrden() const {
-        postOrden(raiz);
-    }
-
-    int altura() const {
-        return altura(raiz);
-    }
-};
+//template<class T>
+//class ArbolBinario {
+//private:
+//    Nodo*<T> raiz;
+//
+//    Nodo*<T> insertarNodo(Nodo<T>* nodo, const Alumno& dato) {
+//        if (nodo == nullptr) {
+//            return new Nodo<T>(dato);
+//        }
+//        if (dato.getEdad() < nodo->dato.getEdad()) {
+//            nodo->izquierdo = insertarNodo(nodo->izquierdo, dato);
+//        }
+//        else {
+//            nodo->derecho = insertarNodo(nodo->derecho, dato);
+//        }
+//        return nodo;
+//    }
+//
+//    void enOrden(Nodo* nodo) const {
+//        if (nodo == nullptr) {
+//            return;
+//        }
+//        enOrden(nodo->izquierdo);
+//        nodo->dato.mostrarDatos();
+//        enOrden(nodo->derecho);
+//    }
+//
+//    void preOrden(Nodo* nodo) const {
+//        if (nodo == nullptr) {
+//            return;
+//        }
+//        nodo->dato.mostrarDatos();
+//        preOrden(nodo->izquierdo);
+//        preOrden(nodo->derecho);
+//    }
+//
+//    void postOrden(Nodo* nodo) const {
+//        if (nodo == nullptr) {
+//            return;
+//        }
+//        postOrden(nodo->izquierdo);
+//        postOrden(nodo->derecho);
+//        nodo->dato.mostrarDatos();
+//    }
+//
+//    int altura(Nodo* nodo) const {
+//        if (nodo == nullptr) {
+//            return 0;
+//        }
+//        return 1 + max(altura(nodo->izquierdo), altura(nodo->derecho));
+//    }
+//
+//public:
+//    ArbolBinario() : raiz(nullptr) {}
+//
+//    void insertar(const Alumno& dato) {
+//        raiz = insertarNodo(raiz, dato);
+//    }
+//
+//    void enOrden() const {
+//        enOrden(raiz);
+//    }
+//
+//    void preOrden() const {
+//        preOrden(raiz);
+//    }
+//
+//    void postOrden() const {
+//        postOrden(raiz);
+//    }
+//
+//    int altura() const {
+//        return altura(raiz);
+//    }
+//};
 
 class Padre {
 public:
@@ -480,5 +480,6 @@ public:
         archivo.close();
     }
 };
+
 
 

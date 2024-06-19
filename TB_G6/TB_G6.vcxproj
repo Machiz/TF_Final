@@ -141,6 +141,7 @@
     <ClCompile Include="Punto.cpp" />
     <ClCompile Include="Registro.cpp" />
     <ClCompile Include="TB_G6.cpp" />
+    <ClCompile Include="Usuarios.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cola.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="Profesor.h" />
     <ClInclude Include="Punto.h" />
     <ClInclude Include="Registro.h" />
+    <ClInclude Include="Usuarios.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
