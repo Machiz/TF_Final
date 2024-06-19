@@ -1,10 +1,10 @@
 #include "Profesor.h"
 #include <fstream>
-#include "Alumno.h"
-#include "ListaEnlazada.h"
+#include "Usuarios.h"
+//#include "ListaEnlazada.h"
 Profesor::Profesor()
 {
-
+    
 }
 void Profesor::opciones()
 {
@@ -87,11 +87,11 @@ void Profesor::ponerNota()
 
 void Profesor::verNotas()
 {
-	Notas<Punto*>* nota;
-	nota = new Notas<Punto*>();
+    Notas<Punto*>* nota;
+    nota = new Notas<Punto*>();
 	Punto* elem;
 	do {
 		elem = nota->quitarNota();
-		if (elem != NULL) cout << elem->toString() << endl;
-	} while (elem != NULL);
+	    cout << elem->toString() << endl;
+	} while (!nota->esVacia());
 }
