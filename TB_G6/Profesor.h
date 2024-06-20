@@ -3,6 +3,7 @@
 #include "Punto.h"
 #include <string>
 #include <fstream>
+#include "Hashtable.h"
 using namespace std;
 
 class Profesor

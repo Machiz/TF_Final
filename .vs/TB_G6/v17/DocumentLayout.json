@@ -3,53 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\marce\\source\\repos\\TF_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\ListaNotas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\ListaNotas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Profesor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Notas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Notas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Ejecutivo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Ejecutivo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Punto.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Punto.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Usuarios.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Usuarios.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\ListaNotas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\ListaNotas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Profesor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Profesor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\TB_G6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\TB_G6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Padre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Padre.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Notas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2B36DAD4-7D73-45EC-8BCB-F63C9B9C7DD4}|TB_G6\\TB_G6.vcxproj|solutionrelative:TB_G6\\Notas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Alumno.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\ListaEnlazada.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Nodo4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,20 +62,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Punto.h",
+              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Punto.h",
+              "RelativeDocumentMoniker": "TB_G6\\Punto.h",
+              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Punto.h",
+              "RelativeToolTip": "TB_G6\\Punto.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-20T03:23:46.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuarios.h",
+              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Usuarios.h",
+              "RelativeDocumentMoniker": "TB_G6\\Usuarios.h",
+              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Usuarios.h",
+              "RelativeToolTip": "TB_G6\\Usuarios.h",
+              "ViewState": "AQIAAHQAAAAAAAAAAAASwIgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-20T03:17:21.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ListaNotas.h",
               "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\ListaNotas.h",
               "RelativeDocumentMoniker": "TB_G6\\ListaNotas.h",
               "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\ListaNotas.h",
               "RelativeToolTip": "TB_G6\\ListaNotas.h",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAQwIwAAAArAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAQwJoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T03:39:00.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Nodo.h",
               "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Nodo.h",
               "RelativeDocumentMoniker": "TB_G6\\Nodo.h",
@@ -110,73 +116,26 @@
               "RelativeDocumentMoniker": "TB_G6\\Notas.h",
               "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Notas.h",
               "RelativeToolTip": "TB_G6\\Notas.h",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACcAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-07T03:39:00.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Padre.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Padre.h",
-              "RelativeDocumentMoniker": "TB_G6\\Padre.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Padre.h",
-              "RelativeToolTip": "TB_G6\\Padre.h",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAkwFYAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Alumno.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Alumno.h",
-              "RelativeDocumentMoniker": "..\\TF_G6\\TB_G6\\Alumno.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Alumno.h",
-              "RelativeToolTip": "..\\TF_G6\\TB_G6\\Alumno.h",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAAAAYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Menu.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Menu.h",
-              "RelativeDocumentMoniker": "TB_G6\\Menu.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Menu.h",
-              "RelativeToolTip": "TB_G6\\Menu.h",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAACEAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Profesor.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.h",
-              "RelativeDocumentMoniker": "TB_G6\\Profesor.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.h",
-              "RelativeToolTip": "TB_G6\\Profesor.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Profesor.cpp",
               "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.cpp",
               "RelativeDocumentMoniker": "TB_G6\\Profesor.cpp",
               "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Profesor.cpp",
               "RelativeToolTip": "TB_G6\\Profesor.cpp",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-07T03:39:00.725Z"
+              "WhenOpened": "2024-06-07T03:39:00.725Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "TB_G6.cpp",
               "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\TB_G6.cpp",
               "RelativeDocumentMoniker": "TB_G6\\TB_G6.cpp",
@@ -188,31 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ListaEnlazada.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\ListaEnlazada.h",
-              "RelativeDocumentMoniker": "..\\TF_G6\\TB_G6\\ListaEnlazada.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\ListaEnlazada.h",
-              "RelativeToolTip": "..\\TF_G6\\TB_G6\\ListaEnlazada.h",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAABAAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ejecutivo.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Ejecutivo.h",
-              "RelativeDocumentMoniker": "TB_G6\\Ejecutivo.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Ejecutivo.h",
-              "RelativeToolTip": "TB_G6\\Ejecutivo.h",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAFYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Notas.cpp",
               "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_Final\\TB_G6\\Notas.cpp",
               "RelativeDocumentMoniker": "TB_G6\\Notas.cpp",
@@ -221,18 +156,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-07T03:39:00.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Nodo4.h",
-              "DocumentMoniker": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Nodo4.h",
-              "RelativeDocumentMoniker": "..\\TF_G6\\TB_G6\\Nodo4.h",
-              "ToolTip": "C:\\Users\\marce\\source\\repos\\TF_G6\\TB_G6\\Nodo4.h",
-              "RelativeToolTip": "..\\TF_G6\\TB_G6\\Nodo4.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-07T03:39:00.732Z"
             }
           ]
         }

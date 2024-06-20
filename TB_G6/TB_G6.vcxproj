@@ -135,7 +135,6 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Notas.cpp" />
-    <ClCompile Include="Padre.cpp" />
     <ClCompile Include="Pila.cpp" />
     <ClCompile Include="Profesor.cpp" />
     <ClCompile Include="Punto.cpp" />
@@ -153,7 +152,6 @@
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Nodo4.h" />
     <ClInclude Include="Notas.h" />
-    <ClInclude Include="Padre.h" />
     <ClInclude Include="Pila.h" />
     <ClInclude Include="Profesor.h" />
     <ClInclude Include="Punto.h" />

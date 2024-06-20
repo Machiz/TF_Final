@@ -45,9 +45,6 @@
     <ClCompile Include="Ejecutivo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Padre.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ListaNotas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -87,9 +84,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ejecutivo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Padre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Nodo4.h">

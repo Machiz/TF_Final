@@ -11,8 +11,12 @@ public:
     string toString()
     {
         ostringstream ss;//como decir int x;(una variable)
+        string cursos[] = { "Matematica", "Ingles", "Comunicacion", "Ciencia", "Historia" };
         ss << "Nota: ";
-        ss << x;
+        for (int i = 0; i <= 4; ++i)
+        {
+            ss <<cursos[i]<<" " << x;
+        }
         return(ss.str());
     }
 };
