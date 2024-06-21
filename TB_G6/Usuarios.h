@@ -172,32 +172,12 @@ public:
             string seccion = (rand() % 2 == 0) ? "A" : "B";
 
             // Pidiendo notas al usuario
-            int notaDesarrolloPersonal, notaCienciasSociales, notaFisica, notaHistoria, notaHistoriaDelArte, notaQuimica, notaMatematica, notaEducacionFisica;
-            cout << "Ingrese las notas para " << nombre << ":\n";
-            cout << "  Desarrollo personal: ";
-            cin >> notaDesarrolloPersonal;
-            cout << "  Ciencias sociales: ";
-            cin >> notaCienciasSociales;
-            cout << "  Física: ";
-            cin >> notaFisica;
-            cout << "  Historia: ";
-            cin >> notaHistoria;
-            cout << "  Historia del arte: ";
-            cin >> notaHistoriaDelArte;
-            cout << "  Química: ";
-            cin >> notaQuimica;
-            cout << "  Matemática: ";
-            cin >> notaMatematica;
-            cout << "  Educación física: ";
-            cin >> notaEducacionFisica;
+           
 
-            Alumno nuevoAlumno(nombre, edad, sexo, anoEscolar, seccion, notaDesarrolloPersonal, notaCienciasSociales, notaFisica, notaHistoria, notaHistoriaDelArte, notaQuimica, notaMatematica, notaEducacionFisica);
+            Alumno nuevoAlumno(nombre, edad, sexo, anoEscolar, seccion);
             insertarAlumno(nuevoAlumno);
 
-            archivo << nombre << "," << edad << "," << sexo << "," << anoEscolar << "," << seccion << ","
-                << notaDesarrolloPersonal << "," << notaCienciasSociales << "," << notaFisica << ","
-                << notaHistoria << "," << notaHistoriaDelArte << "," << notaQuimica << "," << notaMatematica << ","
-                << notaEducacionFisica << endl;
+            archivo << nombre << "," << edad << "," << sexo << "," << anoEscolar << "," << seccion << endl;
         }
         archivo.close();
     }
@@ -249,12 +229,7 @@ public:
     void mostrarNotasAlumno(const string& nombreAlumno) {
         Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
         if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
-            cout << "Notas de " << nombreAlumno << ":\n";
-            cout << "Matemática: " << alumnoEncontrado.notaMatematica << endl;
-            cout << "Ingles: " << alumnoEncontrado.notaDesarrolloPersonal << endl;
-            cout << "Comunicacion: " << alumnoEncontrado.notaFisica << endl;
-            cout << "Ciencias: " << alumnoEncontrado.notaCienciasSociales << endl;
-            cout << "Historia: " << alumnoEncontrado.notaHistoria << endl;
+            
 
         }
         else {
@@ -262,18 +237,7 @@ public:
         }
     }
 
-    void mostrarPromedioAlumno(const string& nombreAlumno) {
-        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
-        if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
-            double promedio = (alumnoEncontrado.notaDesarrolloPersonal + alumnoEncontrado.notaCienciasSociales +
-                alumnoEncontrado.notaFisica + alumnoEncontrado.notaHistoria + alumnoEncontrado.notaHistoriaDelArte +
-                alumnoEncontrado.notaQuimica + alumnoEncontrado.notaMatematica + alumnoEncontrado.notaEducacionFisica) / 8.0;
-            cout << "Promedio de notas de " << nombreAlumno << ": " << promedio << endl;
-        }
-        else {
-            cout << "Alumno no encontrado." << endl;
-        }
-    }
+    
 };
 
 // Clase Nodo para el árbol binario

@@ -34,7 +34,9 @@ void Profesor::opciones()
 
 void Profesor::ponerNota()
 {
-    int n;
+    ListaEnlazada<Alumno> listaAlumnos;
+    int n;//nota
+    int a;//indice lista alumnos
     Notas<Punto*>* nota;
     nota = new Notas<Punto*>();
     int i = 0;
