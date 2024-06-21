@@ -3,6 +3,9 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+//#include "Punto.h"
+//#include "Notas.h"
+//#include "Profesor.h"
 //#include <algorithm> // Para std::max
 //#include <ctime> // Para srand y rand
 
@@ -227,9 +230,16 @@ public:
     }
 
     void mostrarNotasAlumno(const string& nombreAlumno) {
+       
         Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
         if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
-            
+            /*Notas<Punto*>* nota;
+            nota = new Notas<Punto*>();
+            Punto* elem;
+            do {
+                elem = nota->quitarNota();
+                cout << elem->toString() << endl;
+            } while (!nota->esVacia());*/
 
         }
         else {
