@@ -11,9 +11,11 @@ class Profesor
 private:
 	/*string user;
 	string password;*/
+	Notas<Punto*>* nota;
 	string nombreArchivo;
 public:
 	Profesor();
+	
 	void opciones();
 	void ponerNota();
 	void verNotas();

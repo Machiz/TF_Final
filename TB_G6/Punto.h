@@ -13,9 +13,10 @@ public:
         ostringstream ss;//como decir int x;(una variable)
         string cursos[] = { "Matematica", "Ingles", "Comunicacion", "Ciencia", "Historia" };
         ss << "Nota: ";
-        for (int i = 0; i <= 4; ++i)
+        for (int i = 0; i <= 4; i++)
         {
-            ss <<cursos[i]<<" " << x;
+            ss <<cursos[i]<<" " << x<<endl;
+            
         }
         return(ss.str());
     }

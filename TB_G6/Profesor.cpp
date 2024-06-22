@@ -4,7 +4,7 @@
 //#include "ListaEnlazada.h"
 Profesor::Profesor()
 {
-    
+    nota = new Notas<Punto*>();
 }
 void Profesor::opciones()
 {
@@ -37,8 +37,8 @@ void Profesor::ponerNota()
     ListaEnlazada<Alumno> listaAlumnos;
     int n;//nota
     int a;//indice lista alumnos
-    Notas<Punto*>* nota;
-    nota = new Notas<Punto*>();
+    /*Notas<Punto*>* nota;
+    nota = new Notas<Punto*>();*/
     int i = 0;
     int totalNotas = 0;
     string cursos[] = { "Matematica", "Ingles", "Comunicacion", "Ciencia", "Historia" };
@@ -89,8 +89,8 @@ void Profesor::ponerNota()
 
 void Profesor::verNotas()
 {
-    Notas<Punto*>* nota;
-    nota = new Notas<Punto*>();
+    /*Notas<Punto*>* nota;
+    nota = new Notas<Punto*>();*/
 	Punto* elem;
 	do {
 		elem = nota->quitarNota();

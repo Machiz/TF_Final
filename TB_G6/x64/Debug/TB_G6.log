@@ -1,1 +1,10 @@
-﻿  TB_G6.vcxproj -> C:\Users\marce\source\repos\TF_Final\x64\Debug\TB_G6.exe
+﻿  Menu.cpp
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(140,51): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Profesor.cpp
+C:\Users\marce\source\repos\TF_Final\TB_G6\Profesor.cpp(39,9): warning C4101: 'a': unreferenced local variable
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(140,51): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Punto.cpp
+  TB_G6.cpp
+C:\Users\marce\source\repos\TF_Final\TB_G6\Usuarios.h(140,51): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+C:\Users\marce\source\repos\TF_Final\TB_G6\Punto.h(22,1): error C4716: 'Punto::toString': must return a value
