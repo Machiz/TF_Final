@@ -131,6 +131,7 @@
     <ClCompile Include="Ejecutivo.cpp" />
     <ClCompile Include="HashEntidad.cpp" />
     <ClCompile Include="Hashtable.cpp" />
+    <ClCompile Include="ListaAlumnos.cpp" />
     <ClCompile Include="ListaNotas.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Nodo.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Ejecutivo.h" />
     <ClInclude Include="HashEntidad.h" />
     <ClInclude Include="Hashtable.h" />
+    <ClInclude Include="ListaAlumnos.h" />
     <ClInclude Include="ListaNotas.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Nodo.h" />

@@ -58,12 +58,12 @@ void Profesor::ponerNota()
     cout << "El promedio de las notas es: " << promedio << endl;
 
     // Guardar el promedio en un archivo CSV.
-    ofstream archivo("promedio_notas.csv", ios::app); 
+    ofstream archivo("notas_Alumnos.csv", ios::app); 
     if (archivo.is_open())
     {
         archivo << promedio << endl; 
         archivo.close(); 
-        cout << "Promedio guardado en el archivo promedio_notas.csv" << endl;
+        cout << "Promedio guardado en el archivo notas_Alumnos.csv" << endl;
     }
     else
     {
