@@ -60,56 +60,68 @@ public:
             cin >> option1;
             switch (option1) {
             case 1: {
-                cout << "Agregando docentes..." << endl;
-                int numDocentes;
-                cout << "Ingrese el número de docentes a agregar: ";
-                cin >> numDocentes;
-                cin.ignore();
+                int option1;
+                cout << "¿Qué deseas hacer?" << endl;
+                cout << "1. Agregar Docente          2. Regresar a página principal" << endl;
+                cin >> option1;
+                switch (option1) {
+                case 1: {
+                    cout << "Agregando docentes..." << endl;
+                    int numDocentes;
+                    cout << "Ingrese el número de docentes a agregar: ";
+                    cin >> numDocentes;
+                    cin.ignore();
 
-                for (int i = 0; i < numDocentes; ++i) {
-                    string nombreDocente;
-                    cout << "Ingrese el nombre del docente " << i + 1 << ": ";
-                    getline(cin, nombreDocente);
-                    ejecutivo.agregarDocente(nombreDocente);
+                    for (int i = 0; i < numDocentes; ++i) {
+                        string nombreDocente;
+                        cout << "Ingrese el nombre del docente " << i + 1 << ": ";
+                        getline(cin, nombreDocente);
+                        ejecutivo.agregarDocente(nombreDocente);
+                    }
+
+                    char verPlana;
+                    cout << "¿Desea ver la plana? (S/N): ";
+                    cin >> verPlana;
+                    char volver;
+                    if (verPlana == 'S' || verPlana == 's') {
+                        ejecutivo.mostrarPlana();
+                        cout << endl << "Desea elegir un coordinador aleatoriamente? (S/N)";
+                        cin >> volver;
+                        if (volver == 's' || volver == 'S')
+                        {
+                            ejecutivo.elegirCoordinador();
+                            cout << endl << "Desea volver al menu? (S/N)";
+                            cin >> volver;
+                            if (volver == 's' || volver == 'S')
+                            {
+                                system("cls");
+                                menu();
+                            }
+                            else {
+                                break;
+                            }
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    break;
                 }
-
-                char verPlana;
-                cout << "¿Desea ver la plana? (S/N): ";
-                cin >> verPlana;
-                char volver;
-                if (verPlana == 'S' || verPlana == 's') {
-                    ejecutivo.mostrarPlana();
-                    cout << endl << "Desea volver al menu? (S/N)";
-                    cin >> volver;
-                    if (volver == 's' || volver == 'S')
-                    {
-                        system("cls");
-                        menu();
-                    }
-                    else {
-                        break;
-                    }
+                case 2:
+                    cout << "Regresando al menú principal..." << endl;
+                    menu();
+                    break;
+                default:
+                    cout << "Opción no válida." << endl;
+                    break;
                 }
                 break;
             }
-            case 3:
-            {
-                ejecutivo.mostrarPlana();
-                break;
-            }
-            case 2:
-                cout << "Regresando al menú principal..." << endl;
-                menu();
-                break;
             default:
                 cout << "Opción no válida." << endl;
                 break;
             }
-            break;
         }
-        default:
-            cout << "Opción no válida." << endl;
-            break;
 
         case 2: //PROFESORES
         {
