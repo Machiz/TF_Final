@@ -20,18 +20,14 @@ public:
     string genero;
     int grado;
     string seccion;
-    int notaIngles;
+    /*int notaIngles;
     int notaCiencias;
     int notaHistoria;
     int notaMatematica;
-    int notaComunicacion;
+    int notaComunicacion;*/
 
-    Alumno(string nombre, int edad, string genero, int grado, string seccion,
-        int notaIngles = 0, int notaCiencias = 0, int notaFisica = 0, int notaHistoria = 0,
-        int notaHistoriaDelArte = 0, int notaQuimica = 0, int notaMatematica = 0, int notaComunicacion = 0)
-        : nombre(nombre), edad(edad), genero(genero), grado(grado), seccion(seccion),
-        notaIngles(notaIngles), notaCiencias(notaCiencias),
-        notaHistoria(notaHistoria), notaMatematica(notaMatematica), notaComunicacion(notaComunicacion) {}
+    Alumno(string nombre, int edad, string genero, int grado, string seccion)
+        : nombre(nombre), edad(edad), genero(genero), grado(grado), seccion(seccion) {}
 
     int getEdad() const override
     {
@@ -206,11 +202,11 @@ public:
         {
             string sexo = (rand() % 2 == 0) ? "M" : "F";
             int edad = rand() % 11 + 7;
-            int añoEscolar = rand() % 12 + 1;
+            int anoEscolar = rand() % 12 + 1;
             string seccion = (rand() % 2 == 0) ? "A" : "B";
 
             // Pidiendo notas al usuario
-            int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
+            /*int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
             cout << "Ingrese las notas para " << nombre << ":\n";
             cout << "  Ingles: ";
             cin >> notaIngles;
@@ -221,15 +217,12 @@ public:
             cout << "  Matematica: ";
             cin >> notaMatematica;
             cout << "  Comunicacion: ";
-            cin >> notaComunicacion;
+            cin >> notaComunicacion;*/
 
-            Alumno nuevoAlumno(nombre, edad, sexo, añoEscolar, seccion, notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion);
+            Alumno nuevoAlumno(nombre, edad, sexo, anoEscolar, seccion);
             insertarAlumno(nuevoAlumno);
 
-            archivo << nombre << "," << edad << "," << sexo << "," << añoEscolar << "," << seccion << ","
-                << notaIngles << "," << notaCiencias << ","
-                << notaHistoria << "," << notaMatematica << ","
-                << notaComunicacion << endl;
+            archivo << nombre << "," << edad << "," << sexo << "," << anoEscolar << "," << seccion << "," << endl;
         }
         archivo.close();
     }
@@ -256,7 +249,7 @@ public:
 
     void OrdenMerito(const string& nombreAlumno)
     {
-        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
+        Alumno alumnoEncontrado("", 0, "", 0, "");
         if (buscarAlumno(nombreAlumno, alumnoEncontrado))
         {
             ofstream archivo("datos_alumno.csv", ios::app);
@@ -289,15 +282,15 @@ public:
 
     void mostrarNotasAlumno(const string& nombreAlumno)
     {
-        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
+        Alumno alumnoEncontrado("", 0, "", 0, "");
         if (buscarAlumno(nombreAlumno, alumnoEncontrado))
         {
-            cout << "Notas de " << nombreAlumno << ":\n";
+            /*cout << "Notas de " << nombreAlumno << ":\n";
             cout << "Ingles: " << alumnoEncontrado.notaIngles << endl;
             cout << "Ciencia: " << alumnoEncontrado.notaCiencias << endl;
             cout << "Historia: " << alumnoEncontrado.notaHistoria << endl;
             cout << "Matemática: " << alumnoEncontrado.notaMatematica << endl;
-            cout << "Comunicacion: " << alumnoEncontrado.notaComunicacion << endl;
+            cout << "Comunicacion: " << alumnoEncontrado.notaComunicacion << endl;*/
         }
         else
         {
@@ -307,8 +300,8 @@ public:
 
     void mostrarPromedioAlumno(const string& nombreAlumno)
     {
-        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
-        if (buscarAlumno(nombreAlumno, alumnoEncontrado))
+        Alumno alumnoEncontrado("", 0, "", 0, "");
+        /*if (buscarAlumno(nombreAlumno, alumnoEncontrado))
         {
             double promedio = (alumnoEncontrado.notaIngles + alumnoEncontrado.notaCiencias +
                 alumnoEncontrado.notaHistoria + alumnoEncontrado.notaMatematica + alumnoEncontrado.notaComunicacion) / 8.0;
@@ -316,7 +309,7 @@ public:
         }
         else {
             cout << "Alumno no encontrado." << endl;
-        }
+        }*/
     }
 };
 
@@ -438,7 +431,7 @@ public:
 
         string nombre, genero, seccion;
         int edad, grado;
-        int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
+        //int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
 
         cout << "Ingrese el nombre del alumno: ";
         cin.ignore();
