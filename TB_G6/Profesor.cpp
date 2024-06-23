@@ -1,7 +1,7 @@
 #include "Profesor.h"
 #include <fstream>
 #include "Usuarios.h"
-//#include "ListaEnlazada.h"
+using namespace std;
 Profesor::Profesor()
 {
     nota = new Notas<Punto*>();
@@ -10,7 +10,7 @@ void Profesor::opciones()
 {
 	int a;
 	cout << "Seleccione que quiere hacer: " << endl;
-	cout << "1. Poner nota a un alumno " << "		2. Ver Notas colocadas " << "		3. Salir" << endl;
+	cout << "1. Poner nota a un alumno " << "		2. Ver Notas colocadas     " << "		3. Salir" << endl;
 	cin >> a;
 	switch (a)
 	{
@@ -34,24 +34,27 @@ void Profesor::opciones()
 
 void Profesor::ponerNota()
 {
-    ListaEnlazada<Alumno> listaAlumnos;
+    ListaEnlazada<Alumno> *listaAlumnos = new ListaEnlazada<Alumno>;
     int n;//nota
     int a;//indice lista alumnos
     /*Notas<Punto*>* nota;
     nota = new Notas<Punto*>();*/
     int i = 0;
+    int j = 0;
     int totalNotas = 0;
     string cursos[] = { "Matematica", "Ingles", "Comunicacion", "Ciencia", "Historia" };
-
-    while (i <= 4)//log n
+    while (listaAlumnos->mostrarDatos() != nullptr)
     {
-        cout << "inserte la nota del curso " << cursos[i] << ": ";
-        cin >> n;
-        nota->agregarNota(new Punto(n));
-        totalNotas += n; 
-        i++;
+        while (i <= 4)//log n
+        {
+            cout << "inserte la nota del curso " << cursos[i] << ": ";
+            cin >> n;
+            nota->agregarNota(new Punto(n));
+            totalNotas += n;
+            i++;
+        }
+        j++;
     }
-
     double promedio = totalNotas / 5.0; 
 
     cout << "notas guardadas" << endl;

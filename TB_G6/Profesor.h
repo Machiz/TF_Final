@@ -15,7 +15,6 @@ private:
 	string nombreArchivo;
 public:
 	Profesor();
-	
 	void opciones();
 	void ponerNota();
 	void verNotas();
