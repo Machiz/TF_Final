@@ -286,6 +286,3 @@ public:
 
 //para probar la funcionalidad de usuarios
 //#include "Usuarios.h"
-
-
-
