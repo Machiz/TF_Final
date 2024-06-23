@@ -43,8 +43,9 @@ void Profesor::ponerNota()
     int j = 0;
     int totalNotas = 0;
     string cursos[] = { "Matematica", "Ingles", "Comunicacion", "Ciencia", "Historia" };
-    while (listaAlumnos->mostrarDatos() != nullptr)
+    for (int j = 0; j <= listaAlumnos->size(); j++)
     {
+        listaAlumnos->mostrarDatos();
         while (i <= 4)//log n
         {
             cout << "inserte la nota del curso " << cursos[i] << ": ";
@@ -53,7 +54,7 @@ void Profesor::ponerNota()
             totalNotas += n;
             i++;
         }
-        j++;
+        //j++;
     }
     double promedio = totalNotas / 5.0; 
 
