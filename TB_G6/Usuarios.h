@@ -2,50 +2,52 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include <cstdlib>
-#include "ListaAlumnos.h"
-#include "ListaNotas.h"
 
 using namespace std;
 
-// Clase padre con las funciones puras
-class Persona {
+class Persona
+{
 public:
     virtual void mostrarDatos() const = 0;
     virtual int getEdad() const = 0;
 };
 
-class Alumno : public Persona {
+class Alumno : public Persona
+{
 public:
     string nombre;
     int edad;
     string genero;
     int grado;
     string seccion;
-    /*int notaDesarrolloPersonal;
-    int notaCienciasSociales;
-    int notaFisica;
+    int notaIngles;
+    int notaCiencias;
     int notaHistoria;
-    int notaHistoriaDelArte;
-    int notaQuimica;
     int notaMatematica;
-    int notaEducacionFisica;*/
+    int notaComunicacion;
 
-    Alumno(string nombre, int edad, string genero, int grado, string seccion)
-        : nombre(nombre), edad(edad), genero(genero), grado(grado), seccion(seccion) {}
+    Alumno(string nombre, int edad, string genero, int grado, string seccion,
+        int notaIngles = 0, int notaCiencias = 0, int notaFisica = 0, int notaHistoria = 0,
+        int notaHistoriaDelArte = 0, int notaQuimica = 0, int notaMatematica = 0, int notaComunicacion = 0)
+        : nombre(nombre), edad(edad), genero(genero), grado(grado), seccion(seccion),
+        notaIngles(notaIngles), notaCiencias(notaCiencias),
+        notaHistoria(notaHistoria), notaMatematica(notaMatematica), notaComunicacion(notaComunicacion) {}
 
-    int getEdad() const override {
+    int getEdad() const override
+    {
         return edad;
     }
 
-    void mostrarDatos() const override {
+    void mostrarDatos() const override
+    {
         cout << "Nombre: " << nombre << ", Edad: " << edad << ", Género: " << genero
             << ", Grado: " << grado << ", Sección: " << seccion << endl;
     }
 };
 
 template <typename A>
-class nodo4 {
+class nodo4
+{
 public:
     A dato;
     nodo4* siguiente;
@@ -54,33 +56,42 @@ public:
 };
 
 template <typename A>
-class ListaEnlazada {
+class ListaEnlazada
+{
 private:
     nodo4<A>* cabeza;
-
-    nodo4<A>* getUltimoNodo(nodo4<A>* inicio) {
-        while (inicio != nullptr && inicio->siguiente != nullptr) {
+    int contador;
+    nodo4<A>* getUltimoNodo(nodo4<A>* inicio)
+    {
+        while (inicio != nullptr && inicio->siguiente != nullptr)
+        {
             inicio = inicio->siguiente;
         }
         return inicio;
     }
 
-    nodo4<A>* particion(nodo4<A>* inicio, nodo4<A>* fin, nodo4<A>** nuevoInicio, nodo4<A>** nuevoFin) {
+    nodo4<A>* particion(nodo4<A>* inicio, nodo4<A>* fin, nodo4<A>** nuevoInicio, nodo4<A>** nuevoFin)
+    {
         nodo4<A>* pivote = fin;
         nodo4<A>* anterior = nullptr;
         nodo4<A>* actual = inicio;
         nodo4<A>* cola = pivote;
 
-        while (actual != pivote) {
-            if (actual->dato.getEdad() < pivote->dato.getEdad()) {
-                if ((*nuevoInicio) == nullptr) {
+        while (actual != pivote)
+        {
+            if (actual->dato.getEdad() < pivote->dato.getEdad())
+            {
+                if ((*nuevoInicio) == nullptr)
+                {
                     (*nuevoInicio) = actual;
                 }
                 anterior = actual;
                 actual = actual->siguiente;
             }
-            else {
-                if (anterior) {
+            else
+            {
+                if (anterior)
+                {
                     anterior->siguiente = actual->siguiente;
                 }
                 nodo4<A>* tmp = actual->siguiente;
@@ -91,7 +102,8 @@ private:
             }
         }
 
-        if ((*nuevoInicio) == nullptr) {
+        if ((*nuevoInicio) == nullptr)
+        {
             (*nuevoInicio) = pivote;
         }
 
@@ -100,8 +112,10 @@ private:
         return pivote;
     }
 
-    nodo4<A>* quickSortRecursivo(nodo4<A>* inicio, nodo4<A>* fin) {
-        if (!inicio || inicio == fin) {
+    nodo4<A>* quickSortRecursivo(nodo4<A>* inicio, nodo4<A>* fin)
+    {
+        if (!inicio || inicio == fin)
+        {
             return inicio;
         }
 
@@ -110,9 +124,11 @@ private:
 
         nodo4<A>* pivote = particion(inicio, fin, &nuevoInicio, &nuevoFin);
 
-        if (nuevoInicio != pivote) {
+        if (nuevoInicio != pivote)
+        {
             nodo4<A>* tmp = nuevoInicio;
-            while (tmp->siguiente != pivote) {
+            while (tmp->siguiente != pivote)
+            {
                 tmp = tmp->siguiente;
             }
             tmp->siguiente = nullptr;
@@ -131,60 +147,105 @@ private:
 public:
     ListaEnlazada() : cabeza(nullptr) { srand(time(nullptr)); }
 
-    void insertarAlumno(const A& elemento) {
+    void insertarAlumno(const A& elemento)
+    {
         nodo4<A>* nuevoNodo = new nodo4<A>(elemento);
-        if (!cabeza) {
+        if (!cabeza)
+        {
             cabeza = nuevoNodo;
         }
-        else {
+        else
+        {
             nodo4<A>* actual = cabeza;
-            while (actual->siguiente != nullptr) {
+            while (actual->siguiente != nullptr)
+            {
                 actual = actual->siguiente;
             }
             actual->siguiente = nuevoNodo;
         }
+        contador++;
     }
 
-    void mostrarDatos() const {
+    void mostrarDatos() const
+    {
         nodo4<A>* actual = cabeza;
-        while (actual != nullptr) {
+        while (actual != nullptr)
+        {
             actual->dato.mostrarDatos();
             actual = actual->siguiente;
         }
     }
 
-    void generarDatos(const vector<string>& nombres) {
+    int size() const
+    {
+        return contador; // Devuelve el tamaño actual de la lista
+    }
+
+    int contarElementos() const
+    {
+        int contador = 0;
+        nodo4<A>* actual = cabeza;
+        while (actual != nullptr)
+        {
+            contador++;
+            actual = actual->siguiente;
+        }
+        return contador;
+    }
+
+    void generarDatos(const vector<string>& nombres)
+    {
         ofstream archivo("alumnos.csv", ios::app);
-        if (!archivo.is_open()) {
+        if (!archivo.is_open())
+        {
             cerr << "Error: No se pudo abrir el archivo para escribir." << endl;
             return;
         }
 
-        for (const string& nombre : nombres) {
+        for (const string& nombre : nombres)
+        {
             string sexo = (rand() % 2 == 0) ? "M" : "F";
             int edad = rand() % 11 + 7;
-            int anoEscolar = rand() % 12 + 1;
+            int añoEscolar = rand() % 12 + 1;
             string seccion = (rand() % 2 == 0) ? "A" : "B";
 
             // Pidiendo notas al usuario
+            int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
+            cout << "Ingrese las notas para " << nombre << ":\n";
+            cout << "  Ingles: ";
+            cin >> notaIngles;
+            cout << "  Ciencia: ";
+            cin >> notaCiencias;
+            cout << "  Historia: ";
+            cin >> notaHistoria;
+            cout << "  Matematica: ";
+            cin >> notaMatematica;
+            cout << "  Comunicacion: ";
+            cin >> notaComunicacion;
 
-
-            Alumno nuevoAlumno(nombre, edad, sexo, anoEscolar, seccion);
+            Alumno nuevoAlumno(nombre, edad, sexo, añoEscolar, seccion, notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion);
             insertarAlumno(nuevoAlumno);
 
-            archivo << nombre << "," << edad << "," << sexo << "," << anoEscolar << "," << seccion << endl;
+            archivo << nombre << "," << edad << "," << sexo << "," << añoEscolar << "," << seccion << ","
+                << notaIngles << "," << notaCiencias << ","
+                << notaHistoria << "," << notaMatematica << ","
+                << notaComunicacion << endl;
         }
         archivo.close();
     }
 
-    void ordenarPorEdad() {
+    void ordenarPorEdad()
+    {
         cabeza = quickSortRecursivo(cabeza, getUltimoNodo(cabeza));
     }
 
-    bool buscarAlumno(const string& nombreAlumno, Alumno& alumnoEncontrado) const {
+    bool buscarAlumno(const string& nombreAlumno, Alumno& alumnoEncontrado) const
+    {
         nodo4<A>* actual = cabeza;
-        while (actual != nullptr) {
-            if (actual->dato.nombre == nombreAlumno) {
+        while (actual != nullptr)
+        {
+            if (actual->dato.nombre == nombreAlumno)
+            {
                 alumnoEncontrado = actual->dato;
                 return true;
             }
@@ -193,15 +254,19 @@ public:
         return false;
     }
 
-    void OrdenMerito(const string& nombreAlumno) {
-        Alumno alumnoEncontrado("", 0, "", 0, "");
-        if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
+    void OrdenMerito(const string& nombreAlumno)
+    {
+        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
+        if (buscarAlumno(nombreAlumno, alumnoEncontrado))
+        {
             ofstream archivo("datos_alumno.csv", ios::app);
-            if (!archivo.is_open()) {
+            if (!archivo.is_open())
+            {
                 cerr << "Error: No se pudo abrir el archivo para escribir." << endl;
                 return;
             }
-            if (archivo.tellp() == 0) {
+            if (archivo.tellp() == 0)
+            {
                 archivo << "Nombre,Orden de Mérito,Sexo,Edad,Año Escolar,Sección" << endl;
             }
 
@@ -210,38 +275,54 @@ public:
             archivo.close();
 
             cout << "Alumno: " << nombreAlumno << endl;
-            cout << "Orden de Mérito: " << ordenMerito << endl;
+            cout << "Orden de merito: " << ordenMerito << endl;
             cout << "Sexo: " << alumnoEncontrado.genero << endl;
             cout << "Edad: " << alumnoEncontrado.edad << endl;
             cout << "Año Escolar: " << alumnoEncontrado.grado << endl;
             cout << "Sección: " << alumnoEncontrado.seccion << endl;
         }
-        else {
+        else
+        {
             cout << "Alumno no encontrado." << endl;
         }
     }
 
-    void mostrarNotasAlumno(const string& nombreAlumno) {
-
+    void mostrarNotasAlumno(const string& nombreAlumno)
+    {
         Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
-        if (buscarAlumno(nombreAlumno, alumnoEncontrado)) {
-            /*Notas<Punto*>* nota;
-            nota = new Notas<Punto*>();
-            Punto* elem;
-            do {
-                elem = nota->quitarNota();
-                cout << elem->toString() << endl;
-            } while (!nota->esVacia());*/
+        if (buscarAlumno(nombreAlumno, alumnoEncontrado))
+        {
+            cout << "Notas de " << nombreAlumno << ":\n";
+            cout << "Ingles: " << alumnoEncontrado.notaIngles << endl;
+            cout << "Ciencia: " << alumnoEncontrado.notaCiencias << endl;
+            cout << "Historia: " << alumnoEncontrado.notaHistoria << endl;
+            cout << "Matemática: " << alumnoEncontrado.notaMatematica << endl;
+            cout << "Comunicacion: " << alumnoEncontrado.notaComunicacion << endl;
+        }
+        else
+        {
+            cout << "Alumno no encontrado." << endl;
+        }
+    }
 
+    void mostrarPromedioAlumno(const string& nombreAlumno)
+    {
+        Alumno alumnoEncontrado("", 0, "", 0, "", 0, 0, 0, 0, 0, 0, 0, 0);
+        if (buscarAlumno(nombreAlumno, alumnoEncontrado))
+        {
+            double promedio = (alumnoEncontrado.notaIngles + alumnoEncontrado.notaCiencias +
+                alumnoEncontrado.notaHistoria + alumnoEncontrado.notaMatematica + alumnoEncontrado.notaComunicacion) / 8.0;
+            cout << "Promedio de notas de " << nombreAlumno << ": " << promedio << endl;
         }
         else {
             cout << "Alumno no encontrado." << endl;
         }
     }
 };
+
 // Clase Nodo para el árbol binario
-template<class T>
-class Nodo {
+class Nodo
+{
 public:
     Alumno dato;
     Nodo* izquierdo;
@@ -250,94 +331,114 @@ public:
 };
 
 // Clase Árbol Binario
-//template<class T>
-//class ArbolBinario {
-//private:
-//    Nodo*<T> raiz;
-//
-//    Nodo*<T> insertarNodo(Nodo<T>* nodo, const Alumno& dato) {
-//        if (nodo == nullptr) {
-//            return new Nodo<T>(dato);
-//        }
-//        if (dato.getEdad() < nodo->dato.getEdad()) {
-//            nodo->izquierdo = insertarNodo(nodo->izquierdo, dato);
-//        }
-//        else {
-//            nodo->derecho = insertarNodo(nodo->derecho, dato);
-//        }
-//        return nodo;
-//    }
-//
-//    void enOrden(Nodo* nodo) const {
-//        if (nodo == nullptr) {
-//            return;
-//        }
-//        enOrden(nodo->izquierdo);
-//        nodo->dato.mostrarDatos();
-//        enOrden(nodo->derecho);
-//    }
-//
-//    void preOrden(Nodo* nodo) const {
-//        if (nodo == nullptr) {
-//            return;
-//        }
-//        nodo->dato.mostrarDatos();
-//        preOrden(nodo->izquierdo);
-//        preOrden(nodo->derecho);
-//    }
-//
-//    void postOrden(Nodo* nodo) const {
-//        if (nodo == nullptr) {
-//            return;
-//        }
-//        postOrden(nodo->izquierdo);
-//        postOrden(nodo->derecho);
-//        nodo->dato.mostrarDatos();
-//    }
-//
-//    int altura(Nodo* nodo) const {
-//        if (nodo == nullptr) {
-//            return 0;
-//        }
-//        return 1 + max(altura(nodo->izquierdo), altura(nodo->derecho));
-//    }
-//
-//public:
-//    ArbolBinario() : raiz(nullptr) {}
-//
-//    void insertar(const Alumno& dato) {
-//        raiz = insertarNodo(raiz, dato);
-//    }
-//
-//    void enOrden() const {
-//        enOrden(raiz);
-//    }
-//
-//    void preOrden() const {
-//        preOrden(raiz);
-//    }
-//
-//    void postOrden() const {
-//        postOrden(raiz);
-//    }
-//
-//    int altura() const {
-//        return altura(raiz);
-//    }
-//};
+class ArbolBinario
+{
+private:
+    Nodo* raiz;
 
-class Padre {
+    Nodo* insertarNodo(Nodo* nodo, const Alumno& dato)
+    {
+        if (nodo == nullptr)
+        {
+            return new Nodo(dato);
+        }
+        if (dato.getEdad() < nodo->dato.getEdad())
+        {
+            nodo->izquierdo = insertarNodo(nodo->izquierdo, dato);
+        }
+        else
+        {
+            nodo->derecho = insertarNodo(nodo->derecho, dato);
+        }
+        return nodo;
+    }
+
+    void enOrden(Nodo* nodo) const
+    {
+        if (nodo == nullptr)
+        {
+            return;
+        }
+        enOrden(nodo->izquierdo);
+        nodo->dato.mostrarDatos();
+        enOrden(nodo->derecho);
+    }
+
+    void preOrden(Nodo* nodo) const
+    {
+        if (nodo == nullptr)
+        {
+            return;
+        }
+        nodo->dato.mostrarDatos();
+        preOrden(nodo->izquierdo);
+        preOrden(nodo->derecho);
+    }
+
+    void postOrden(Nodo* nodo) const
+    {
+        if (nodo == nullptr)
+        {
+            return;
+        }
+        postOrden(nodo->izquierdo);
+        postOrden(nodo->derecho);
+        nodo->dato.mostrarDatos();
+    }
+
+    int altura(Nodo* nodo) const
+    {
+        if (nodo == nullptr)
+        {
+            return 0;
+        }
+        return 1 + max(altura(nodo->izquierdo), altura(nodo->derecho));
+    }
+
 public:
-    void matricularAlumno(const string& archivoAlumnos) {
+    ArbolBinario() : raiz(nullptr) {}
+
+    void insertar(const Alumno& dato)
+    {
+        raiz = insertarNodo(raiz, dato);
+    }
+
+    void enOrden() const
+    {
+        enOrden(raiz);
+    }
+
+    void preOrden() const
+    {
+        preOrden(raiz);
+    }
+
+    void postOrden() const
+    {
+        postOrden(raiz);
+    }
+
+    int altura() const
+    {
+        return altura(raiz);
+    }
+};
+
+class Padre
+{
+public:
+    void matricularAlumno(const string& archivoAlumnos)
+    {
         ofstream archivo(archivoAlumnos, ios::app);
-        if (!archivo.is_open()) {
+        if (!archivo.is_open())
+        {
             cerr << "Error: No se pudo abrir el archivo para escribir." << endl;
             return;
         }
 
         string nombre, genero, seccion;
         int edad, grado;
-        //int notaDesarrolloPersonal, notaCienciasSociales, notaFisica, notaHistoria, notaHistoriaDelArte, notaQuimica, notaMatematica, notaEducacionFisica;
+        int notaIngles, notaCiencias, notaHistoria, notaMatematica, notaComunicacion;
 
         cout << "Ingrese el nombre del alumno: ";
         cin.ignore();
@@ -351,32 +452,20 @@ public:
         cout << "Ingrese la seccion del alumno: ";
         cin >> seccion;
 
-        // Pidiendo notas al usuario
-        /*cout << "Ingrese las notas para " << nombre << ":\n";
-        cout << "  Desarrollo personal: ";
-        cin >> notaDesarrolloPersonal;
-        cout << "  Ciencias sociales: ";
-        cin >> notaCienciasSociales;
-        cout << "  Física: ";
-        cin >> notaFisica;
-        cout << "  Historia: ";
-        cin >> notaHistoria;
-        cout << "  Historia del arte: ";
-        cin >> notaHistoriaDelArte;
-        cout << "  Química: ";
-        cin >> notaQuimica;
-        cout << "  Matemática: ";
-        cin >> notaMatematica;
-        cout << "  Educación física: ";
-        cin >> notaEducacionFisica;*/
 
-        archivo << nombre << "," << edad << "," << genero << "," << grado << "," << seccion << endl;
+
+        archivo << nombre << "," << edad << "," << genero << "," << grado << "," << seccion << "," << endl;
+        /*<< notaIngles << "," << notaCiencias << ","
+        << notaHistoria << "," << notaMatematica << ","
+        << notaComunicacion << endl;*/
         archivo.close();
     }
 
-    void verNotasAlumno(const string& archivoNotas) {
+    void verNotasAlumno(const string& archivoNotas)
+    {
         ifstream archivo(archivoNotas);
-        if (!archivo.is_open()) {
+        if (!archivo.is_open())
+        {
             cerr << "Error: No se pudo abrir el archivo para leer." << endl;
             return;
         }
@@ -386,9 +475,11 @@ public:
         cin.ignore();
         getline(cin, nombre);
 
-        while (getline(archivo, linea)) {
+        while (getline(archivo, linea))
+        {
             size_t pos = linea.find(nombre);
-            if (pos != string::npos) {
+            if (pos != string::npos)
+            {
                 cout << "Notas de " << nombre << ":\n";
                 cout << linea << endl;
                 archivo.close();
@@ -400,9 +491,11 @@ public:
         archivo.close();
     }
 
-    void verPromedioNotas(const string& archivoNotas) {
+    void verPromedioNotas(const string& archivoNotas)
+    {
         ifstream archivo(archivoNotas);
-        if (!archivo.is_open()) {
+        if (!archivo.is_open())
+        {
             cerr << "Error: No se pudo abrir el archivo para leer." << endl;
             return;
         }
@@ -412,12 +505,15 @@ public:
         cin.ignore();
         getline(cin, nombre);
 
-        while (getline(archivo, linea)) {
+        while (getline(archivo, linea))
+        {
             size_t pos = linea.find(nombre);
-            if (pos != string::npos) {
+            if (pos != string::npos)
+            {
                 vector<string> datos;
                 size_t inicio = 0, fin = linea.find(",");
-                while (fin != string::npos) {
+                while (fin != string::npos)
+                {
                     datos.push_back(linea.substr(inicio, fin - inicio));
                     inicio = fin + 1;
                     fin = linea.find(",", inicio);
@@ -425,7 +521,8 @@ public:
                 datos.push_back(linea.substr(inicio, fin - inicio));
 
                 double promedio = 0;
-                for (int i = 5; i < datos.size(); ++i) {
+                for (int i = 5; i < datos.size(); ++i)
+                {
                     promedio += stoi(datos[i]);
                 }
                 promedio /= (datos.size() - 5);
@@ -440,6 +537,4 @@ public:
         archivo.close();
     }
 };
-
-
 
